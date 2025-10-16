@@ -26,7 +26,7 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 # Define the texts paths for embedding extraction
 all_paths = {
 
-    # "proust_mistral_gen": "../textes/STYLE_GEN/PROUST_MISTRAL_GEN", 
+    # "proust_mistral_gen": "../Texts/STYLE_GEN/PROUST_MISTRAL_GEN", 
     # "yourcenar_mistral_gen": "../textes/STYLE_GEN/YOURCENAR_MISTRAL_GEN", 
     # "celine_mistral_gen": "../textes/STYLE_GEN/CELINE_MISTRAL_GEN", 
 
