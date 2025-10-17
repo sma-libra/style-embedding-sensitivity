@@ -13,7 +13,6 @@ import openai
 import time
 import voyageai
 import google.generativeai as genai
-import textwrap
 import yaml
 
 with open('../config.yaml', 'r') as file:
