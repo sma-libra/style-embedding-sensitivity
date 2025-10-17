@@ -14,11 +14,15 @@ import time
 import voyageai
 import google.generativeai as genai
 import textwrap
+import yaml
 
-# API keys
-mistral_client = Mistral()
-openai.api_key = ''
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+with open('../config.yaml', 'r') as file:
+    config = yaml.safe_load(file)
+
+
+mistral_client = Mistral(api_key=config['api_keys']['mistralai'])
+openai.api_key = config['api_keys']['openai']
+genai.configure(api_key=config['api_keys']['genai'])
 
 ##########################################################################
 #  CHANGE HERE 
@@ -27,23 +31,70 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 all_paths = {
 
     # "proust_mistral_gen": "../Texts/STYLE_GEN/PROUST_MISTRAL_GEN", 
-    # "yourcenar_mistral_gen": "../textes/STYLE_GEN/YOURCENAR_MISTRAL_GEN", 
-    # "celine_mistral_gen": "../textes/STYLE_GEN/CELINE_MISTRAL_GEN", 
+    # "yourcenar_mistral_gen": "../Texts/STYLE_GEN/YOURCENAR_MISTRAL_GEN", 
+    # "celine_mistral_gen": "../Texts/STYLE_GEN/CELINE_MISTRAL_GEN", 
 
-    # "proust_gpt_gen": "../textes/STYLE_GEN/PROUST_GPT_GEN", 
-    # "yourcenar_gpt_gen": "../textes/STYLE_GEN/YOURCENAR_GPT_GEN", 
-    # "celine_gpt_gen": "../textes/STYLE_GEN/CELINE_GPT_GEN", 
+    # "proust_gpt_gen": "../Texts/STYLE_GEN/PROUST_GPT_GEN", 
+    # "yourcenar_gpt_gen": "../Texts/STYLE_GEN/YOURCENAR_GPT_GEN", 
+    # "celine_gpt_gen": "../Texts/STYLE_GEN/CELINE_GPT_GEN", 
     
-    # "proust_gemini_gen": "../textes/STYLE_GEN/PROUST_GEMINI_GEN", 
-    # "yourcenar_gemini_gen": "../textes/STYLE_GEN/YOURCENAR_GEMINI_GEN", 
-    # "celine_gemini_gen": "../textes/STYLE_GEN/CELINE_GEMINI_GEN", 
+    # "proust_gemini_gen": "../Texts/STYLE_GEN/PROUST_GEMINI_GEN", 
+    # "yourcenar_gemini_gen": "../Texts/STYLE_GEN/YOURCENAR_GEMINI_GEN", 
+    # "celine_gemini_gen": "../Texts/STYLE_GEN/CELINE_GEMINI_GEN", 
     
-    # "tuffery_ref": "../textes/TUFFERY_REF",  
-    # "proust_ref": "../textes/STYLE_REF/PROUST_REF", 
-    # "yourcenar_ref": "../textes/STYLE_REF/YOURCENAR_REF", 
-    # "celine_ref": "../textes/STYLE_REF/CELINE_REF", 
+    # "tuffery_ref": "../Texts/TUFFERY_REF",  
+    # "proust_ref": "../Texts/STYLE_REF/PROUST_REF", 
+    # "yourcenar_ref": "../Texts/STYLE_REF/YOURCENAR_REF", 
+    # "celine_ref": "../Texts/STYLE_REF/CELINE_REF", 
 
 }
+
+
+# Embedding generation functions
+def get_text_embedding_mistral(input_text, model_path):
+    embeddings_batch_response = mistral_client.embeddings.create(
+        model=model_path,
+        inputs=input_text
+    )
+    return np.array(embeddings_batch_response.data[0].embedding)
+
+def get_text_embedding_openai(input_text, model_path):
+    response = openai.Embedding.create(
+        model=model_path,
+        input=input_text
+    )
+    return np.array(response['data'][0]['embedding'])
+
+def get_text_embedding_voyageai(input_text, model_path):
+    response = voyageai.Client(api_key=config['api_keys']['voyageai']).embed(
+        model=model_path,
+        texts=[input_text]
+    )
+    return np.array(response.embeddings[0])
+
+def get_text_embedding_genai(input_text, model_path):
+
+    max_bytes = 9500
+    """Truncates a string to fit within the max_bytes limit."""
+    encoded_text = input_text.encode('utf-8')  # Convert text to bytes
+    if len(encoded_text) <= max_bytes:
+        truncated_text = input_text
+    else:
+    # Truncate at the last valid character boundary
+        truncated_text = encoded_text[:max_bytes].decode('utf-8', errors='ignore')
+
+
+    result = genai.embed_content(
+        model=model_path,
+        content=truncated_text)
+    
+    return np.array(result['embedding'])
+
+
+##########################################################################
+#  CHANGE HERE 
+##########################################################################
+
 
 # Model configurations
 # Advice : run voyage alone if possible, because rate limits are lower
@@ -69,45 +120,6 @@ time_sleep = 2
 ##
 
 
-# Embedding generation functions
-def get_text_embedding_mistral(input_text, model_path):
-    embeddings_batch_response = mistral_client.embeddings.create(
-        model=model_path,
-        inputs=input_text
-    )
-    return np.array(embeddings_batch_response.data[0].embedding)
-
-def get_text_embedding_openai(input_text, model_path):
-    response = openai.Embedding.create(
-        model=model_path,
-        input=input_text
-    )
-    return np.array(response['data'][0]['embedding'])
-
-def get_text_embedding_voyageai(input_text, model_path):
-    response = voyageai.Client().embed(
-        model=model_path,
-        texts=[input_text]
-    )
-    return np.array(response.embeddings[0])
-
-def get_text_embedding_genai(input_text, model_path):
-
-    max_bytes = 9500
-    """Truncates a string to fit within the max_bytes limit."""
-    encoded_text = input_text.encode('utf-8')  # Convert text to bytes
-    if len(encoded_text) <= max_bytes:
-        truncated_text = input_text
-    else:
-    # Truncate at the last valid character boundary
-        truncated_text = encoded_text[:max_bytes].decode('utf-8', errors='ignore')
-
-
-    result = genai.embed_content(
-        model=model_path,
-        content=truncated_text)
-    
-    return np.array(result['embedding'])
 
 
 

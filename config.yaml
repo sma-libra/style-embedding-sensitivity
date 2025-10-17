@@ -1,0 +1,5 @@
+api_keys:
+  openai: "your_openai_api_key_here"
+  mistralai: "your_mistralai_api_key_here"
+  genai: "your_genai_api_key_here"
+  voyageai: "your_voyageai_api_key_here"
