@@ -6,40 +6,25 @@ This repository contains all the code, data, and results associated with the pap
 
 ## Repository structure
 
+```
 ├── README.md  
-
 ├── config.yaml         
-
 ├── Texts/     
-
 │   └── STYLE_GEN/     
-
 ├── Embeddings/        
-
 │   └── 3_embeddings_creation.py  
-
 │   └── STYLE_GEN/
-
 │   └── STYLE_REF/
-
 │   └── TUFFERY_REF/
-
 ├── Results/                   
-
 │   └── 3.3_clustering-based_validation.ipynb
-
 │   └── 4.1_dispersion.ipynb
-
 │   └── 4.2_vectors_sensitivity_to_human_style.ipynb
-
 │   └── 4.3_stylistic_influence_of_gen_AI.ipynb
-
 │   └── distance_pertext_umap_TS_gen.xlsx
-
 │   └── distance_pertext_umap_TS_ref.xlsx
-
 │   └── stylo_terreau_df.xlsx
-
+```
 
 ## Results and Notebooks
 
@@ -50,9 +35,10 @@ Each notebook contains the code to reproduce the results, tables and plots from 
 ## Generating Embeddings
 
 We provided the code used to compute the embeddings in 
+```
 ├── Embeddings/                
 │   └── 3_embeddings_creation.py  
-
+```
 Two variables must be set inside the file to use it : 
 - all_paths for the paths of the folder(s) in which the .txt files to be embedded are.
 - model_configs for the embedding model(s) to be used. (Note: Some may require an API key)
@@ -64,6 +50,6 @@ Plon) classes.
 
 
 Exemple use: 
-
+```
 python Embeddings/3_embeddings_creation.py --config config.yaml
-
+```
