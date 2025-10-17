@@ -52,7 +52,8 @@ Two variables must be set inside the file to use it :
 We provided the texts in .txt format for the STYLE_GEN class, but not for the TUFFERY_REF (Stéphane Tufféry. 2000. Le style mode d’emploi. Paris: Cylibris) ou STYLE_REF (Marcel Proust. 1913. Du côté de chez Swann, volume 1, chapter 1. Gallimard; Louis-Ferdinand Céline. 1932. Voyage au bout de la nuit. Denoël et Steele; Marguerite Yourcenar. 1951. Mémoires d’Hadrien. Plon) classes.
 
 
-Exemple use: 
+### Exemple use: 
+From style-embedding-sensitivity:
 ```
-python Embeddings/3_embeddings_creation.py
+ python Embeddings/3_embeddings_creation.py
 ```
