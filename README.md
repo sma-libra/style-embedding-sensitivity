@@ -28,7 +28,7 @@ This repository contains all the code, data, and results associated with the pap
 
 ## Usage
 
-Some models require API keys to use. In you want to use one of these, you should add your API in the config.yaml file.
+Some models require API keys to use. In you want to use one of these, you should add your API key in the config.yaml file.
 
 All experiments using the embeddings provided can be done without API keys, and we provided several embeddings models which don't require them either.
 
