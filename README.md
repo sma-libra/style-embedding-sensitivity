@@ -6,22 +6,38 @@ This repository contains all the code, data, and results associated with the pap
 
 ## Repository structure
 
-├── README.md
-├── config.yaml               
+├── README.md  
+
+├── config.yaml         
+
 ├── Texts/     
-│   └── STYLE_GEN             
-├── Embeddings/                
+
+│   └── STYLE_GEN/     
+
+├── Embeddings/        
+
 │   └── 3_embeddings_creation.py  
+
 │   └── STYLE_GEN/
+
 │   └── STYLE_REF/
+
 │   └── TUFFERY_REF/
+
 ├── Results/                   
+
 │   └── 3.3_clustering-based_validation.ipynb
+
 │   └── 4.1_dispersion.ipynb
+
 │   └── 4.2_vectors_sensitivity_to_human_style.ipynb
+
 │   └── 4.3_stylistic_influence_of_gen_AI.ipynb
+
 │   └── distance_pertext_umap_TS_gen.xlsx
+
 │   └── distance_pertext_umap_TS_ref.xlsx
+
 │   └── stylo_terreau_df.xlsx
 
 
