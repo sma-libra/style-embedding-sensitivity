@@ -6,11 +6,7 @@ This repository contains all the code, data, and results associated with the pap
 
 ## Repository structure
 
-```
-├── README.md  
-├── config.yaml         
-├── Texts/     
-│   └── STYLE_GEN/     
+```  
 ├── Embeddings/        
 │   └── 3_embeddings_creation.py  
 │   └── STYLE_GEN/
@@ -24,6 +20,10 @@ This repository contains all the code, data, and results associated with the pap
 │   └── distance_pertext_umap_TS_gen.xlsx
 │   └── distance_pertext_umap_TS_ref.xlsx
 │   └── stylo_terreau_df.xlsx
+├── Texts/     
+│   └── STYLE_GEN/   
+├── README.md  
+├── config.yaml         
 ```
 
 ## Results and Notebooks
