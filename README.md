@@ -1,8 +1,8 @@
 # Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations
 
-## Repository for the experiments and data accompanying our LREC 2026 submission
+## Repository for the data and experiments accompanying our LREC 2026 submission
 
-This repository contains all the code, data, and results associated with the paper: Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations. This repository's purpose is to reproduce our analyses, generate embeddings, and explore our results.
+This repository contains all the code, data, and results associated with the paper: Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
 
 ## Repository structure
 
