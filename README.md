@@ -32,6 +32,15 @@ Some models require API keys to use. In you want to use one of these, you should
 
 All experiments using the embeddings provided can be done without API keys, and we provided several embeddings models which don't require them either.
 
+## Dataset
+
+In the Texts subfolder : STYLE_GEN (subset of StyloGen, not fully available) comprises 864 French texts created by prompting three large language models (GPT-4o, mistral-large-2411, and gemini-1.5-flash) to rewrite the 96 fixed-topic passages from Stéphane Tufféry's Le style mode d'emploi (2000) in the style of three canonical French authors: Marcel Proust's Du côté de chez Swann (1913), Louis-Ferdinand Céline's Voyage au bout de la nuit (1932), and Marguerite Yourcenar's Mémoires d'Hadrien (1951). All generated texts preserve the same narrative content, namely the Paris bus-journey episode adapted from Raymond Queneau's Exercices de style (1947), while varying only in stylistic rendition according to the target author and model. These constitute transformative stylistic imitations consistent with fair use principles. This controlled design enables systematic analysis of how embeddings represent and differentiate authorial style independently of topical content.
+
+In the Embeddings subfolder : The StyloGen set consists of 16,224 vector embeddings derived from 1,248 French texts in the StyloGen corpus, each represented across 13 state-of-the-art embedding models. The underlying texts include 384 human-authored literary passages (from Stéphane Tufféry's Le style mode d'emploi (2000), Marcel Proust's Du côté de chez Swann (1913), Louis-Ferdinand Céline's Voyage au bout de la nuit (1932), and Marguerite Yourcenar's Mémoires d'Hadrien (1951)) and 864 machine-generated rewritings created by GPT-4o, mistral-large-2411, and gemini-1.5-flash in the styles of these authors. Each text was embedded using thirteen multilingual or French-compatible models selected for diversity and high performance on the Massive Text Embedding Benchmark (MTEB), including xlm-roberta-large, mistral-embed, text-embedding-3-small, text-embedding-004, multilingual-e5-large, and others.
+
+The resulting collection contains 16,224 non-reversible embedding vectors (1,248 texts × 13 models), released for research use under a non-commercial, research-only license. These embeddings allow quantitative investigation of how different vectorization models encode and differentiate writing style, topic, and authorship signals in both human and LLM-generated texts.
+
+
 ## Results and Notebooks
 
 All analyses corresponding to sections of the article are contained in the Results/ folder as Jupyter notebooks.
