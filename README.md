@@ -1,8 +1,8 @@
-# Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations
+# Embedding Sensitivity to Authorial Style in French Literary Texts and LLM Rewritings
 
-## Repository for the data and experiments accompanying our LREC 2026 submission
+## Repository for the data and experiments accompanying our NLP4DH 2026 submission
 
-This repository contains all the code, data, and results associated with the paper: Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
+This repository contains all the code, data, and results associated with the paper: Embedding Sensitivity to Authorial Style in French Literary Texts and LLM Rewritings. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
 
 ## Repository structure
 
