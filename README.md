@@ -13,10 +13,11 @@ This repository contains all the code, data, and results associated with the pap
 │   └── STYLE_REF/
 │   └── TUFFERY_REF/
 ├── Results/                   
-│   └── 3.3_clustering-based_validation.ipynb
-│   └── 4.1_dispersion.ipynb
-│   └── 4.2_vectors_sensitivity_to_human_style.ipynb
-│   └── 4.3_stylistic_influence_of_gen_AI.ipynb
+│   └── 3.3_style_transfer_evaluation.ipynb
+│   └── 3.4_clustering_under_topic_control.ipynb
+│   └── 4.1_dispersion_metrics.ipynb
+│   └── 4.2_embedding_sensitivity_to_authorial_style.ipynb
+│   └── 4.3_sensitivity_after_LLM-based_rewriting.ipynb
 │   └── distance_pertext_umap_TS_gen.xlsx
 │   └── distance_pertext_umap_TS_ref.xlsx
 │   └── stylo_terreau_df.xlsx
