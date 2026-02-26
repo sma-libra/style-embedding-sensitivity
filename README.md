@@ -1,8 +1,8 @@
-# Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations
+# Measuring Embedding Sensitivity to Authorial Style in French: Literary Texts versus Language Model Rewritings
 
-## Repository for the data and experiments accompanying our LREC 2026 submission
+## Repository for the data and experiments accompanying our NLP4DH 2026 submission
 
-This repository contains all the code, data, and results associated with the paper: Exploring Writing Style in Embedding Space: Human Literary Texts versus Language Model Generations. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
+This repository contains all the code, data, and results associated with the paper: Measuring Embedding Sensitivity to Authorial Style in French: Literary Texts versus Language Model Rewritings. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
 
 ## Repository structure
 
@@ -43,7 +43,7 @@ The resulting collection contains 16,224 non-reversible embedding vectors (1,248
 
 ## Results and Notebooks
 
-All analyses corresponding to sections of the article are contained in the Results/ folder as Jupyter notebooks.
+All analyses corresponding to sections of the article are contained in the Results/folder as Jupyter notebooks.
 
 Each notebook contains the code to reproduce the results, tables and plots from a specific section of the article. They are named to match the corresponding section of the article.
 
