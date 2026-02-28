@@ -15,6 +15,7 @@ This repository contains all the code, data, and results associated with the pap
 ├── Results/                   
 │   └── 3.3_style_transfer_evaluation.ipynb
 │   └── 3.4_clustering_under_topic_control.ipynb
+│   └── 4_sensitivity_correlations_per_corpus_per_dimension.xlsx
 │   └── 4.1_dispersion_metrics.ipynb
 │   └── 4.2_embedding_sensitivity_to_authorial_style.ipynb
 │   └── 4.3_sensitivity_after_LLM-based_rewriting.ipynb
