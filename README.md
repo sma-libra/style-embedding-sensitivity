@@ -1,8 +1,30 @@
 # Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings
 
-## Repository for the data and experiments accompanying our NLP4DH 2026 submission
+## Repository for the data and experiments
 
-This repository contains all the code, data, and results associated with the paper: Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
+This repository contains all the code, data, and results associated with the paper ``Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings'', published at NLP4DH 2026. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
+
+## Citation
+
+If you use this repository in your work, please cite the related paper:
+
+### APA
+
+Icard, B., Sainero, L., Breton, A., Zve, E., & Ganascia, J.-G. (2026). Measuring embedding sensitivity to authorial style in French: Comparing literary texts with language model rewritings. In *Proceedings of the 6th International Conference on Natural Language Processing for the Digital Humanities (NLP4DH 2026)*. Association for Computational Linguistics.
+
+### BibTeX
+
+```bibtex
+@inproceedings{icard2026measuring,
+  title     = {Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings},
+  author    = {Icard, Benjamin and Sainero, Lila and Breton, Alice and Zve, Evangelia and Ganascia, Jean-Gabriel},
+  booktitle = {Proceedings of the 6th International Conference on Natural Language Processing for the Digital Humanities (NLP4DH 2026)},
+  publisher = {Association for Computational Linguistics},
+  year      = {2026},
+  url       = {https://hal.science/hal-05618944v1}
+}
+```
+
 
 ## Repository structure
 
