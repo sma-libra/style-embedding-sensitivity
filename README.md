@@ -2,7 +2,7 @@
 
 ## Repository for the data and experiments
 
-This repository contains all the code, data, and results associated with the paper ``Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings'', published at NLP4DH 2026. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
+This repository contains all the code, data, and results associated with the paper _Measuring Embedding Sensitivity to Authorial Style in French: Comparing Literary Texts with Language Model Rewritings_, published at the Conference NLP4DH 2026. This repository's purpose is to generate embeddings, reproduce our analyses, and explore the results.
 
 ## Citation
 
