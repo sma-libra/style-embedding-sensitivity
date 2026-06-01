@@ -21,7 +21,7 @@ Icard, B., Sainero, L., Breton, A., Zve, E., & Ganascia, J.-G. (2026). Measuring
   booktitle = {Proceedings of the 6th International Conference on Natural Language Processing for the Digital Humanities (NLP4DH 2026)},
   publisher = {Association for Computational Linguistics},
   year      = {2026},
-  url       = {https://hal.science/hal-05618944v1}
+  url       = {https://arxiv.org/abs/2605.10606}
 }
 ```
 
